@@ -9,6 +9,7 @@ from nltk.corpus import stopwords
 
 nltk.download('punkt')
 nltk.download('stopwords')
+nltk.download('punkt_tab')
 
 st.set_page_config(
     page_title="Learning English from News",
