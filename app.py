@@ -92,6 +92,11 @@ def summarize_learning_content(text):
 def extract_keywords(text):
     try:
         
+        import nltk
+        nltk.download('punkt')  
+        from nltk.tokenize import word_tokenize
+        from nltk.corpus import stopwords
+
         words = word_tokenize(text)
         stop_words = set(stopwords.words('english'))
         filtered_words = [word for word in words if word.lower() not in stop_words and word.isalpha()]
